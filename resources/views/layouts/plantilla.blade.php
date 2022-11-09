@@ -8,9 +8,7 @@
     @vite('resources/css/app.css')
     <title>@yield('title')</title>
 </head>
-
-
-
+<div id="root">
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href="https://flowbite.com/" class="flex items-center">
@@ -43,13 +41,9 @@
   </div>
 </nav>
 
-
-
-
 <body>
     @yield('content')
 </body>
-
 
 <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
   <div class="sm:flex sm:items-center sm:justify-between">
@@ -76,5 +70,5 @@
   <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
   </span>
 </footer>
-
+</div>
 </html>
