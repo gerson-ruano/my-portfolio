@@ -31,15 +31,17 @@
 
   <div id="work-cards" class="{{'content-center grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 '}}">
 
-  <div class="w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+<!-- Card 1 -->  
+  
+    <div class="w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="">
+        <img class="rounded-t-lg" src="https://user-images.githubusercontent.com/104822099/200525493-d53e54c0-5b3f-4053-b47d-416ab9f72df3.png" alt="football clubs manager website">
     </a>
     <div class="p-5">
         <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Football Clubs Manager</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Gestiona de una manera sencilla y eficiente los partidos equipos de los distintos clubs de football</p>
         <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Read more
             <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -47,16 +49,17 @@
     </div>
   </div>
 
+<!-- Card 2 -->  
 
 <div class="w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
   <a href="#">
-      <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="">
+      <img class="rounded-t-lg" src="https://user-images.githubusercontent.com/104822099/201490484-cd362106-3c79-4c78-a237-7b7076d0b58b.png" alt="price comparison cards">
   </a>
   <div class="p-5">
       <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Tarjetas para comparar precios</h5>
       </a>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Compara de una manera sencilla y muy visual los diferentes precios y características de los distintos productos o servicios</p>
       <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Read more
           <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -67,13 +70,13 @@
 
 <div class="w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
   <a href="#">
-      <img class="rounded-t-lg" src="{{ asset('resources/images/foto-perfil.png') }}" alt="">
+      <img class="rounded-t-lg" src="https://user-images.githubusercontent.com/104822099/201469987-dbdf992a-aa79-4554-b6e2-907273811ad3.png" alt="">
   </a>
   <div class="p-5">
       <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Lista de tareas</h5>
       </a>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Gestiona todas tus tareas desde un unico sitio. Crea, edita o elimina tus tareas y cambia su estado</p>
       <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Read more
           <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -88,9 +91,9 @@
   </a>
   <div class="p-5">
       <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Csv-to-Json-Converter</h5>
       </a>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Convert online your .csv files into .json</p>
       <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Read more
           <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -117,7 +120,7 @@
     
     <div class="w-96"><img src="{{url('/../resources/images/foto-perfil-web.png');}}" alt="My logo" width="250px" />
     </div>
-    <div class="w-96">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero assumenda corrupti soluta ipsam deleniti nobis nisi, architecto, asperiores quo mollitia quas omnis excepturi necessitatibus similique ipsa nemo doloribus quos. Quisquam?</div>
+    <div class="w-96">Vengo del sector del marketing y la publicidad, pero desde hace tiempo he dedicado parte de mi tiempo libre a crear páginas web aprendiendo de manera autodidacta. En los últimos tiempos he decidido reorientar mi carrera formándome como desarrollador web y dedicar todo mi tiempo a mi verdadera pasión.</div>
   
   </div>
   </div>
