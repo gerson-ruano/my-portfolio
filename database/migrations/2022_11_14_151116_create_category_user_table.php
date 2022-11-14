@@ -13,21 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('works', function (Blueprint $table) {
+        Schema::create('category_user', function (Blueprint $table) {
             $table->id();
-            $table->string('name',30)->unique();
-            $table->text('description',135);
-            $table->string('demo_link');
-            $table->string('repo_link');
-            $table->string('img_url');
             $table->timestamps();
 
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')
             ->references('id')->on('users')->nullOnDelete();
 
-
-
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')
+            ->references('id')->on('categories')->nullOnDelete();
         });
     }
 
@@ -38,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('works');
+        Schema::dropIfExists('category_user');
     }
 };
