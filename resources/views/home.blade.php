@@ -62,7 +62,7 @@
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Tarjetas para comparar precios</h5>
       </a>
       <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Compara de una manera sencilla y muy visual los diferentes precios y características de los distintos productos o servicios</p>
-      <a href="#" class="inline-flex items-center mr-2 py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <a href="https://carlos-full-stack.github.io/price-comparison-cards-nuwe/" class="inline-flex items-center mr-2 py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         <svg class="w-5 h-5 pr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Demo
       </a>
       <a href="https://github.com/carlos-full-stack/price-comparison-cards-nuwe" class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">
@@ -78,7 +78,7 @@
   </a>
   <div class="p-5">
       <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Lista de tareas</h5>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mi lista de tareas</h5>
       </a>
       <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Gestiona todas tus tareas desde un unico sitio. Crea, edita o elimina tus tareas y cambia su estado</p>
       <a href="#" class="inline-flex items-center mr-2 py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -97,9 +97,9 @@
   </a>
   <div class="p-5">
       <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Csv-to-Json-Converter</h5>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Csv to Json Online Converter</h5>
       </a>
-      <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Convert online your .csv files into .json</p>
+      <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">Convierte tus archivos csv a json con esta herramienta</p>
       <a href="#" class="inline-flex items-center mr-2 py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         <svg class="w-5 h-5 pr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Demo
       </a>
