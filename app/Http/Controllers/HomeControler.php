@@ -11,7 +11,6 @@ class HomeControler extends Controller
     {
         $workModel = new work();
         $works = $workModel->getAllWorks();
-        // return view('home',compact('works'));
         return view('home',compact('works'));
     }
 }
