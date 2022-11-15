@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeControler;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeControler::class); {
-    return view('home');
+  return view('home');
 };
+
+Route::get('/admin', [AdminController::class, 'adminIndex'])->name('admin.index');
+Route::get('/admin/create', [AdminController::class, 'adminCreate' ])->name('admin.create');
+Route::get('/admin/edit', [AdminController::class, 'adminEdit' ])->name('admin.edit');
+Route::get('/admin/update', [AdminController::class, 'adminUpdate' ])->name('admin.update');
+Route::get('/admin/destroy', [AdminController::class, 'adminDestroy' ])->name('admin.destroy');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
