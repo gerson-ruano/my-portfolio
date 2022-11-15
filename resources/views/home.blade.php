@@ -4,6 +4,8 @@
 
 @section('content')
 
+@include('layouts.navigationHome')
+
 <!-- Header image -->
 
 <div class="{{ 'bg-indigo-500 : h-80 : bg-[url("../images/header-background.jpg")] ' }}" id="header-img">

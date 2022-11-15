@@ -4,10 +4,9 @@
 
 @section('content')
 
+@include('layouts.navigationAdmin')
 
 <!-- Works section -->
-
-
 
 <div id="work-cards" class="{{'content-center grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 '}}">
 
