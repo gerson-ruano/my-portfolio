@@ -15,9 +15,7 @@ use App\Http\Controllers\Admin\AdminController;
 |
 */
 
-Route::get('/', HomeControler::class); {
-  return view('home');
-};
+Route::get('/', HomeControler::class);
 
 Route::get('/admin', [AdminController::class, 'adminIndex'])->name('admin.index');
 Route::get('/admin/create', [AdminController::class, 'adminCreate' ])->name('admin.create');
