@@ -13,13 +13,13 @@ class AdminController extends Controller
 
         $workModel = new Work();
         $works = $workModel->getAllWorks();
-        return view('admin',compact('works'));
+        return view('adminIndex',compact('works'));
 
     }
 
-    public function adminCreateWork() {
+    public function adminCreate() {
 
-        return "show form to add new work";
+        return view('adminCreate');
 
     }
 
