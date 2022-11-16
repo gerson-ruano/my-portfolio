@@ -23,19 +23,33 @@ class AdminController extends Controller
 
     }
 
-    public function adminEditWork(work $Work) {
+    public function adminSave(Request $request) {
+
+        $work = new work();
+        $work->name = $request->name;
+        $work->description = $request->description;
+        $work->demo_link = $request->demo_link;
+        $work->repo_link = $request->repo_link;
+
+        $work->save();
+
+        return redirect()->action([AdminController::class, 'adminIndex']);
+
+    }
+
+    public function adminEdit(work $Work) {
 
         return "get work and edit by form";
 
     }
 
-    public function adminUpdateWork() {
+    public function adminUpdate() {
 
         return "get new work data from form and update it";
 
     }
 
-    public function adminDestroyWork(work $Work) {
+    public function adminDelete(work $Work) {
 
         return "get work and remove it from database";
     }
