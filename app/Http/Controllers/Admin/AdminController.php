@@ -38,9 +38,12 @@ class AdminController extends Controller
 
     }
 
-    public function adminEdit(work $Work) {
+    public function adminEdit(Work $work) {
 
-        return "get work and edit by form";
+        $workModel = new Work();
+        $work = $workModel->getWork($work);
+
+        return view('adminEdit', compact('work'));
 
     }
 

@@ -27,5 +27,12 @@ class Work extends Model
         return $works;
     }
 
+    public function getWork($work) 
+    {
+        $work = Work::find($work);
+        return $work;
+
+    }
+
 
 }
