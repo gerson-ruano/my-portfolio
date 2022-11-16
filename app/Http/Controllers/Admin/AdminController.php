@@ -26,6 +26,7 @@ class AdminController extends Controller
     public function adminSave(Request $request) {
 
         $work = new work();
+        $work->img_url = "enlace de prueba";
         $work->name = $request->name;
         $work->description = $request->description;
         $work->demo_link = $request->demo_link;
