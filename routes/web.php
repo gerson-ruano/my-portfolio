@@ -19,9 +19,10 @@ Route::get('/', HomeControler::class);
 
 Route::get('/admin', [AdminController::class, 'adminIndex'])->name('admin.index');
 Route::get('/admin/create', [AdminController::class, 'adminCreate' ])->name('admin.create');
+Route::post('/admin/create', [AdminController::class, 'adminSave' ])->name('admin.save');
 Route::get('/admin/edit', [AdminController::class, 'adminEdit' ])->name('admin.edit');
-Route::get('/admin/update', [AdminController::class, 'adminUpdate' ])->name('admin.update');
-Route::get('/admin/destroy', [AdminController::class, 'adminDestroy' ])->name('admin.destroy');
+Route::put('/admin/update', [AdminController::class, 'adminUpdate' ])->name('admin.update');
+Route::delete('/admin/delete', [AdminController::class, 'adminDelete' ])->name('admin.delete');
 
 
 Route::get('/dashboard', function () {
