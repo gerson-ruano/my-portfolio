@@ -13,6 +13,7 @@ class AdminController extends Controller
 
         $workModel = new Work();
         $works = $workModel->getAllWorks();
+        
         return view('adminIndex',compact('works'));
 
     }
@@ -40,16 +41,21 @@ class AdminController extends Controller
 
     public function adminEdit(Work $work) {
 
-        $workModel = new Work();
-        $work = $workModel->getWork($work);
-
         return view('adminEdit', compact('work'));
 
     }
 
-    public function adminUpdate() {
+    public function adminUpdate(Request $request, Work $work) {
 
-        return "get new work data from form and update it";
+        $work->img_url = "enlace de prueba";
+        $work->name = $request->name;
+        $work->description = $request->description;
+        $work->demo_link = $request->demo_link;
+        $work->repo_link = $request->repo_link;
+
+        $work->save();
+
+        return redirect()->action([AdminController::class, 'adminIndex']);
 
     }
 
