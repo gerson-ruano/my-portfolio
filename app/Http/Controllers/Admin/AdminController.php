@@ -59,8 +59,10 @@ class AdminController extends Controller
 
     }
 
-    public function adminDelete(work $Work) {
+    public function adminDelete(Work $work) {
 
-        return "get work and remove it from database";
+        $work->delete();
+        
+        return redirect()->action([AdminController::class, 'adminIndex']);
     }
 }
