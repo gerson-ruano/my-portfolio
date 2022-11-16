@@ -4,7 +4,7 @@
 
 @section('content')
 
-@include('layouts.navigationAdmin')
+@include('layouts.navigationAdminBack')
 
 <!-- Work section -->
 
