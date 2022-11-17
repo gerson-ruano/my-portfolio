@@ -9,7 +9,7 @@
 <!-- Work section -->
 
 <section id="works" class="p-10 bg-slate-200">
-  <form action="{{route('admin.update', $work)}}" method="POST">
+  <form action="{{route('admin.update', $work)}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 
@@ -17,9 +17,9 @@
 
       <div class="flex flex-col lg:flex-row lg:max-w-6xl lg:p-2	w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div id="work-img" class="lg:max-w-md lg:p-6">
-            <img class="rounded-t-lg" src="{{$work->img_url}}" alt="football clubs manager website">
+            <img class="rounded-t-lg" src="{{ asset('storage/'. $work->img_name) }}">
             <div class="p-5 lg:p-0 lg:pt-5">
-            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file"> 
+            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file" name="image"> 
             </div>
           </div>
         <div id="work-form" class="p-5 w-full">

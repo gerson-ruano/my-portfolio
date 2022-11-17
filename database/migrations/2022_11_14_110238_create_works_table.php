@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('works', function (Blueprint $table) {
             $table->id();
+            $table->string('img_name');
             $table->string('name',30)->unique();
             $table->text('description',135);
             $table->string('demo_link');
             $table->string('repo_link');
-            $table->string('img_url');
             $table->timestamps();
 
             $table->unsignedBigInteger('user_id')->nullable();
