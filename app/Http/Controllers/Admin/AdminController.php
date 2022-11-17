@@ -13,30 +13,64 @@ class AdminController extends Controller
 
         $workModel = new Work();
         $works = $workModel->getAllWorks();
-        return view('admin',compact('works'));
+        
+        return view('adminIndex',compact('works'));
 
     }
 
-    public function adminCreateWork() {
+    public function adminCreate() {
 
-        return "show form to add new work";
-
-    }
-
-    public function adminEditWork(work $Work) {
-
-        return "get work and edit by form";
+        return view('adminCreate');
 
     }
 
-    public function adminUpdateWork() {
+    public function adminSave(Request $request) {
+   
+        $fileName = $request->file('image')->hashName();
+        $request->file('image')->storeAs('public', $fileName);
 
-        return "get new work data from form and update it";
+        $work = new work();
+        $work->img_name = $fileName;
+        $work->name = $request->name;
+        $work->description = $request->description;
+        $work->demo_link = $request->demo_link;
+        $work->repo_link = $request->repo_link;
+
+
+        $work->save();
+
+        return redirect()->action([AdminController::class, 'adminIndex']);
 
     }
 
-    public function adminDestroyWork(work $Work) {
+    public function adminEdit(Work $work) {
 
-        return "get work and remove it from database";
+        return view('adminEdit', compact('work'));
+
+    }
+
+    public function adminUpdate(Request $request, Work $work) {
+
+        $fileName = $request->file('image')->hashName();
+        $request->file('image')->storeAs('public', $fileName);
+
+
+        $work->img_name = $fileName;
+        $work->name = $request->name;
+        $work->description = $request->description;
+        $work->demo_link = $request->demo_link;
+        $work->repo_link = $request->repo_link;
+
+        $work->save();
+
+        return redirect()->action([AdminController::class, 'adminIndex']);
+
+    }
+
+    public function adminDelete(Work $work) {
+
+        $work->delete();
+        
+        return redirect()->action([AdminController::class, 'adminIndex']);
     }
 }

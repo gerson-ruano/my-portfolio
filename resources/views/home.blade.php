@@ -4,6 +4,8 @@
 
 @section('content')
 
+@include('layouts.navigationHome')
+
 <!-- Header image -->
 
 <div class="{{ 'bg-indigo-500 : h-80 : bg-[url("../images/header-background.jpg")] ' }}" id="header-img">
@@ -35,7 +37,7 @@
   
     <div class="w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        <img class="rounded-t-lg" src="{{$work->img_url}}" alt="football clubs manager website">
+        <img class="rounded-t-lg" src="{{ asset('storage/'. $work->img_name) }}" alt="football clubs manager website">
     </a>
     <div class="p-5">
         <a href="#">
