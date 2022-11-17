@@ -25,13 +25,17 @@ class AdminController extends Controller
     }
 
     public function adminSave(Request $request) {
+   
+        $fileName = $request->file('image')->hashName();
+        $request->file('image')->storeAs('public', $fileName);
 
         $work = new work();
-        $work->img_url = "enlace de prueba";
+        $work->img_name = $fileName;
         $work->name = $request->name;
         $work->description = $request->description;
         $work->demo_link = $request->demo_link;
         $work->repo_link = $request->repo_link;
+
 
         $work->save();
 
@@ -47,7 +51,11 @@ class AdminController extends Controller
 
     public function adminUpdate(Request $request, Work $work) {
 
-        $work->img_url = "enlace de prueba";
+        $fileName = $request->file('image')->hashName();
+        $request->file('image')->storeAs('public', $fileName);
+
+
+        $work->img_name = $fileName;
         $work->name = $request->name;
         $work->description = $request->description;
         $work->demo_link = $request->demo_link;
