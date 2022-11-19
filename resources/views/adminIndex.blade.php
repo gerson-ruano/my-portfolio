@@ -4,7 +4,9 @@
 
 @section('content')
 
-@include('layouts.navigationAdmin')
+@include('layouts.navigation')
+
+@include('components.add-button')
 
 <!-- Works section -->
 

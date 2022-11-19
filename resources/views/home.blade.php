@@ -4,7 +4,7 @@
 
 @section('content')
 
-@include('layouts.navigationHome')
+@include('layouts.navigation')
 
 <!-- Header image -->
 
