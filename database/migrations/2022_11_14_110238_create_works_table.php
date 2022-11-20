@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('description',135);
             $table->string('demo_link');
             $table->string('repo_link');
+            $table->boolean('is_visible')->default(true);
             $table->timestamps();
 
             $table->unsignedBigInteger('user_id')->nullable();

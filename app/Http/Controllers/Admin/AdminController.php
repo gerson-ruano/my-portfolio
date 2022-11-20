@@ -51,15 +51,21 @@ class AdminController extends Controller
 
     public function adminUpdate(Request $request, Work $work) {
 
-        $fileName = $request->file('image')->hashName();
-        $request->file('image')->storeAs('public', $fileName);
 
-
-        $work->img_name = $fileName;
+       if ($request->image)  // By default work has a image. If file has an image upgrade it
+        {
+          
+            $fileName = $request->file('image')->hashName();
+            $request->file('image')->storeAs('public', $fileName);
+            $work->img_name = $fileName;
+       
+        };
+        
         $work->name = $request->name;
         $work->description = $request->description;
         $work->demo_link = $request->demo_link;
         $work->repo_link = $request->repo_link;
+        $work->is_visible = $request->input('status');
 
         $work->save();
 

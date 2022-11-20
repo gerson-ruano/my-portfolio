@@ -17,6 +17,8 @@ use App\Http\Controllers\Admin\AdminController;
 
 Route::get('/', HomeControler::class);
 
+Route::middleware('auth')->group(function () {
+
 Route::get('/admin', [AdminController::class, 'adminIndex'])->name('admin.index');
 Route::get('/admin/create', [AdminController::class, 'adminCreate' ])->name('admin.create');
 Route::post('/admin/create', [AdminController::class, 'adminSave' ])->name('admin.save');
@@ -24,14 +26,7 @@ Route::get('/admin/edit/{work}', [AdminController::class, 'adminEdit' ])->name('
 Route::put('/admin/update/{work}', [AdminController::class, 'adminUpdate' ])->name('admin.update');
 Route::delete('/admin/delete/{work}', [AdminController::class, 'adminDelete' ])->name('admin.delete');
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-
-
-
+});
 
 
 require __DIR__.'/auth.php';
