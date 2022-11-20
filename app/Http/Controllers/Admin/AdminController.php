@@ -65,6 +65,7 @@ class AdminController extends Controller
         $work->description = $request->description;
         $work->demo_link = $request->demo_link;
         $work->repo_link = $request->repo_link;
+        $work->is_visible = $request->input('status');
 
         $work->save();
 
