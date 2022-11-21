@@ -39,7 +39,11 @@ class AdminController extends Controller
 
         $work->save();
 
-        return redirect()->action([AdminController::class, 'adminIndex']);
+        return redirect()->route('admin.index')->with(
+            [
+                'type' => '¡Creado!',
+                'msg' =>'Tu trabajo se ha creado correctamente'
+            ]);
 
     }
 
@@ -69,7 +73,11 @@ class AdminController extends Controller
 
         $work->save();
 
-        return redirect()->action([AdminController::class, 'adminIndex']);
+        return redirect()->route('admin.index')->with(
+            [
+                'type' => '¡Actualizado!',
+                'msg' =>'Tu trabajo se ha actualizado correctamente'
+            ]);
 
     }
 
@@ -77,6 +85,11 @@ class AdminController extends Controller
 
         $work->delete();
         
-        return redirect()->action([AdminController::class, 'adminIndex']);
+        return redirect()->route('admin.index')->with(
+            [
+                'type' => '¡Eliminado!',
+                'msg' =>'Tu trabajo se ha eliminado correctamente'
+            ]);
+
     }
 }
