@@ -18,7 +18,7 @@
   
     <div class="w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        <img class="rounded-t-lg @if(!$work->is_visible) opacity-20 @endif" src="{{ asset('storage/'. $work->img_name) }}">
+        <img class="rounded-t-lg max-w-382 @if(!$work->is_visible) opacity-20 @endif" src="{{ asset('storage/'. $work->img_name) }}">
     </a>
     <div class="p-5">
         <a href="#">
