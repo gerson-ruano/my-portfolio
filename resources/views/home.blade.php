@@ -27,11 +27,10 @@
   <div id="block-works" class="{{'text-center : mt-5'}}">
 
     <h2 class="{{ 'text-3xl : font-bold' }}">Mis trabajos</h2>
-    <div class="{{'mt-2 : mb-6'}}">Estos son mis trabajos actuales</div>
 
   </div>
 
-  <div id="work-cards" class="{{'content-center grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 '}}">
+  <div id="work-cards" class="{{' mt-12 content-center grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 '}}">
 
 @foreach ($works as $work)
   
@@ -75,15 +74,17 @@
   <div id="block-works" class="{{'text-center : mt-5'}}">
 
     <h2 class="{{ 'text-3xl : font-bold' }}">Sobre mí</h2>
-    <div class="{{'mt-2'}}">Alguna información sobre mí</div>
 
   </div>
 
-  <div id="info-card" class="{{'flex : flex-col : items-center : justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : md:flex-row' }}">
+  <div id="info-card" class="{{'flex : flex-col : items-center : space-be  justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : md:flex-row' }}">
     
     <div><img src="{{url('/../resources/images/foto-perfil-web.png');}}" alt="My logo" width="250px" />
     </div>
-    <div class="{{'w-96 : sm:m-10'}}">Vengo del sector del marketing y la publicidad, pero desde hace tiempo he dedicado parte de mi tiempo libre a crear páginas web aprendiendo de manera autodidacta. En los últimos tiempos he decidido reorientar mi carrera formándome como desarrollador web y dedicar todo mi tiempo a mi verdadera pasión.</div>
+    <div class="{{' max-w-550 : sm:m-10'}}">
+      <h3 class=" text-2xl mb-2">Hola, mi nombre es Carlos Martínez</h3>
+      <p>Vengo del sector del marketing y la publicidad, pero desde hace tiempo he dedicado parte de mi tiempo libre a crear páginas web aprendiendo de manera autodidacta. En los últimos tiempos he decidido reorientar mi carrera formándome como desarrollador web y dedicar todo mi tiempo a mi verdadera pasión.</p>
+    </div>
   
   </div>
   </div>
@@ -95,10 +96,9 @@
 <section id="contact-me">
   <div id="contact">
 
-    <div id="block-contact" class="{{'text-center : mt-5'}}">
+    <div id="block-contact" class="{{'text-center : mt-6'}}">
   
       <h2 class="{{ 'text-3xl : font-bold' }}">Contacto</h2>
-      <div class="{{'mt-2'}}">Contacta conmigo</div>
   
     </div>
   </div>
@@ -106,20 +106,16 @@
 <section id="contact-form" class="{{'p-24'}}">
     <form>
       <div class="mb-6">
-        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required="">
+        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tu nombre</label>
+        <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tu nombre" required="">
+      </div>
+      <div class="mb-6">  
+        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tu mensaje</label>
+        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escribe aquí"></textarea>
       </div>
       <div class="mb-6">
-        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
-        <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+      <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Enviar</button>
       </div>
-      <div class="flex items-start mb-6">
-        <div class="flex items-center h-5">
-          <input id="remember" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
-        </div>
-        <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-      </div>
-      <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
     </form>
   </section>
 
