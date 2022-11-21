@@ -14,7 +14,11 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
-        },
+
+            maxWidth: {
+                '328': '382px',
+            
+        }},
     },
 
     plugins: [require('@tailwindcss/forms'), require('flowbite/plugin')],
