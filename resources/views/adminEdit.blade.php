@@ -32,7 +32,7 @@
           <!-- Modal body -->
           <div class="flex flex-col lg:flex-row lg:max-w-6xl lg:p-2	w-full m-2 max-w-sm">
             <div id="work-img" class="lg:max-w-md lg:p-8">
-                <img class="rounded-t-lg" src="{{ asset('storage/'. $work->img_name) }}">
+                <img class="rounded-t-lg max-w-382" src="{{ asset('storage/'. $work->img_name) }}">
                 <div class="p-5 lg:p-0 lg:pt-5">
                 <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file" name="image"> 
                 </div>

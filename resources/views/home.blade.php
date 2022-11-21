@@ -37,7 +37,7 @@
   
     <div class="@if($work->is_visible) w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 @else hidden @endif">
     <a href="#">
-        <img class="rounded-t-lg" src="{{ asset('storage/'. $work->img_name) }}" alt="football clubs manager website">
+        <img class="rounded-t-lg max-w-382" src="{{ asset('storage/'. $work->img_name) }}" alt="football clubs manager website">
     </a>
     <div class="p-5">
         <a href="#">
