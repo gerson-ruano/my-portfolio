@@ -33,8 +33,11 @@
             <div id="work-img" class="lg:max-w-md lg:p-8">
                 <img class="rounded-t-lg max-w-382" src="{{ asset('storage/work-default-img.png') }}">
                 <div class="p-5 lg:p-0 lg:pt-5">
-                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file" name="image"> 
-                </div>
+                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 @error('image') is-invalid @enderror" id="file_input" type="file" name="image"> 
+                @error('image')
+                <div class="alert alert-danger text-red-600">{{ $message }}</div>
+            @enderror  
+              </div>
               </div>
             <div id="work-form" class="p-6 w-full">
               <div class="mb-6">

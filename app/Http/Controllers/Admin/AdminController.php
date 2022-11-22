@@ -28,7 +28,7 @@ class AdminController extends Controller
 
         $request->validate(
         
-        [   'image' => ['image','nullable'],
+        [   'image' => ['image','required'],
             'name' => ['required', 'min:6', 'max:30'],
             'description' =>['required', 'min:47', 'max:135'],
             'demo_link' =>['url','nullable'],
