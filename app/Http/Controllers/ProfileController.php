@@ -18,6 +18,14 @@ class ProfileController extends Controller
     public function profileUpdate(Request $request) 
 
     {
+        $request->validate(
+        
+            [   'image' => ['image','required'],
+                'name' => ['required', 'min:6', 'max:30'],
+                'description' =>['required', 'min:224'],
+            ]);
+
+
         $user = User::find(Auth::id());
         
         if ($request->image)  
