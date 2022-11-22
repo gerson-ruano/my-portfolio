@@ -64,6 +64,15 @@ class AdminController extends Controller
 
     public function adminUpdate(Request $request, Work $work) {
 
+        $request->validate(
+
+            [   'image' => ['image','nullable'],
+                'name' => ['required', 'min:6', 'max:30'],
+                'description' =>['required', 'min:47', 'max:135'],
+                'demo_link' =>['url','nullable'],
+                'repo_link' =>['url','nullable'],
+            ]);
+
 
        if ($request->image)  // By default work has a image. If file has an image upgrade it
         {
