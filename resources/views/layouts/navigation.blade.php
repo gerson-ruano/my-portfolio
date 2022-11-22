@@ -9,7 +9,7 @@
   @auth
   <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
     <span class="sr-only">Open user menu</span>
-    <img class="w-8 h-8 rounded-full" src="{{ asset('/storage/profile-img.png') }}" alt="user photo">
+    <img class="w-8 h-8 rounded-full object-cover" src="{{ asset('storage/'. Auth::user()->img_name) }}" alt="user photo">
   </button>
   <!-- Dropdown menu -->
   <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
