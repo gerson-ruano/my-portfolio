@@ -79,11 +79,11 @@
 
   <div id="info-card" class="{{'flex : flex-col : items-center : space-be  justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : md:flex-row' }}">
     
-    <div><img src="{{url('/../resources/images/foto-perfil-web.png');}}" alt="My logo" width="250px" />
+    <div><img class="rounded-full w-60 h-60 object-cover" src="{{ asset('storage/'. $user->img_name) }}" alt="My logo" width="250px" />
     </div>
     <div class="{{' max-w-550 : sm:m-10'}}">
-      <h3 class=" text-2xl mb-2">Hola, mi nombre es Carlos Martínez</h3>
-      <p>Vengo del sector del marketing y la publicidad, pero desde hace tiempo he dedicado parte de mi tiempo libre a crear páginas web aprendiendo de manera autodidacta. En los últimos tiempos he decidido reorientar mi carrera formándome como desarrollador web y dedicar todo mi tiempo a mi verdadera pasión.</p>
+      <h3 class=" text-2xl mb-2">Hola, mi nombre es {{$user->name}}</h3>
+      <p>{{$user->description}}</p>
     </div>
   
   </div>
