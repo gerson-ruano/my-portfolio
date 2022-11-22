@@ -25,6 +25,15 @@ class AdminController extends Controller
     }
 
     public function adminSave(Request $request) {
+
+        $request->validate(
+        
+        [   'image' => ['image','nullable'],
+            'name' => ['required', 'min:6', 'max:30'],
+            'description' =>['required', 'min:47', 'max:135'],
+            'demo_link' =>['url','nullable'],
+            'repo_link' =>['url','nullable'],
+        ]);
    
         $fileName = $request->file('image')->hashName();
         $request->file('image')->storeAs('public', $fileName);
