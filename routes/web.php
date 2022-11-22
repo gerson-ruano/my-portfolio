@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeControler;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ Route::get('/', HomeControler::class)->name('index');;
 Route::middleware('auth')->group(function () {
 
 Route::get('/admin', [AdminController::class, 'adminIndex'])->name('admin.index');
+Route::get('profile/edit', [ProfileController::class, 'profileEdit'])->name('profile.edit');
+Route::put('profile/update', [ProfileController::class, 'profileUpdate'])->name('profile.update');
 Route::get('/admin/create', [AdminController::class, 'adminCreate' ])->name('admin.create');
 Route::post('/admin/create', [AdminController::class, 'adminSave' ])->name('admin.save');
 Route::get('/admin/edit/{work}', [AdminController::class, 'adminEdit' ])->name('admin.edit');
