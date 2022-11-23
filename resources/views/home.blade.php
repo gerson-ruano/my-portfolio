@@ -8,15 +8,19 @@
 
 <!-- Header image -->
 
-<div class="{{ 'bg-indigo-500 : h-80 : bg-[url("../images/header-background.jpg")] ' }}" id="header-img">
+<div class="{{ 'bg-gradient-to-r from-indigo-800 to-pink-500' }}" id="header-img">
 
   <div id="heading" class="p-10 text-center">
-    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">Desarollador Web Full Stack</h1>
-    <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">¡Hola, soy Carlos Martínez. Soy desarrolador web full stack. En esta web encontrarás todos mis proyectos y tecnologías con las que he trabajado.</p>
-    <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-      Ver trabajos
-      <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-    </a>
+    <h1 class=" font-sans mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">Desarollador Web Full Stack</h1>
+    <p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">¡Hola, soy Carlos Martínez. Soy desarrolador web full stack. En esta web encontrarás todos mis proyectos y tecnologías con las que he trabajado.</p>
+    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+      <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"> 
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 animate-bounce inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
+        </svg>
+        <div class="inline px-2 "> DESCARGAR CV</div>
+      </span>
+    </button>
   </div>
 </div>
 
@@ -36,7 +40,7 @@
   
     <div class="@if($work->is_visible) w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 @else hidden @endif">
     <a href="#">
-        <img class="rounded-t-lg max-w-382" src="{{ asset('storage/'. $work->img_name) }}" alt="football clubs manager website">
+        <img class="rounded-t-lg" src="{{ asset('storage/'. $work->img_name) }}" alt="football clubs manager website">
     </a>
     <div class="p-5">
         <a href="#">
@@ -69,20 +73,21 @@
 
 <!-- About me section -->
 
-<section id="about-me" class="bg-slate-100 pt-6">
+<section id="about-me" class="bg-gradient-to-r from-indigo-100 to-pink-100">
 
   <div id="block-works" class="{{'text-center : mt-5'}}">
 
-    <h2 class="{{ 'text-3xl : font-bold' }}">Sobre mí</h2>
+    <h2 class="{{ 'text-3xl : font-bold : pt-12' }}">Sobre mí</h2>
 
   </div>
 
   <div id="info-card" class="{{'flex : flex-col : items-center : space-be  justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : md:flex-row' }}">
     
-    <div><img class="rounded-full w-60 h-60 object-cover" src="{{ asset('storage/'. $user->img_name) }}" alt="My logo" width="250px" />
+    <div class="rounded-full w-60 h-60 bg-gradient-to-r from-indigo-800 to-pink-500 flex justify-center items-center">
+      <img class="rounded-full w-56 h-56 object-cover" src="{{ asset('storage/'. $user->img_name) }}" alt="My logo" width="250px" />
     </div>
     <div class="{{' max-w-550 : sm:m-10'}}">
-      <h3 class=" text-2xl mb-2">Hola, mi nombre es {{$user->name}}</h3>
+      <h3 class=" text-3xl mb-4">Hola, mi nombre es {{$user->name}}</h3>
       <p>{{$user->description}}</p>
     </div>
   
@@ -98,7 +103,7 @@
 
     <div id="block-contact" class="{{'text-center : mt-6'}}">
   
-      <h2 class="{{ 'text-3xl : font-bold' }}">Contacto</h2>
+      <h2 class="{{ 'text-3xl : font-bold : mt-8' }}">Contacto</h2>
   
     </div>
   </div>
@@ -114,7 +119,7 @@
         <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escribe aquí"></textarea>
       </div>
       <div class="mb-6">
-      <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Enviar</button>
+      <button type="submit" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Enviar</button>
       </div>
     </form>
   </section>
