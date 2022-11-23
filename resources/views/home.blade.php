@@ -12,15 +12,13 @@
 
   <div id="heading" class="p-10 text-center">
     <h1 class=" font-sans mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">Desarollador Web Full Stack</h1>
-    <p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">¡Hola, soy Carlos Martínez. Soy desarrolador web full stack. En esta web encontrarás todos mis proyectos y tecnologías con las que he trabajado.</p>
-    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-      <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"> 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 animate-bounce inline">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
-        </svg>
-        <div class="inline px-2 "> DESCARGAR CV</div>
-      </span>
-    </button>
+    <p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">¡Hola, soy Carlos Martínez! Soy desarrolador web full stack. En esta web encontrarás todos mis proyectos y tecnologías con las que he trabajado.</p>
+    <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 inline">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      Descargar cv
+     </button>
   </div>
 </div>
 
@@ -28,9 +26,13 @@
 
 <section id="works" class="{{'p-10'}}">
 
-  <div id="block-works" class="{{'text-center : mt-5'}}">
-
-    <h2 class="{{ 'text-3xl : font-bold' }}">Mis trabajos</h2>
+  <div id="block-works" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
+    <div>
+      <img src="{{ asset('storage/homepage_icons/'. 'works.png') }}" class=" w-12 mr-5">
+    </div>
+    <div>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Mis trabajos</h2>
+    </div>
 
   </div>
 
@@ -73,11 +75,15 @@
 
 <!-- About me section -->
 
-<section id="about-me" class="bg-gradient-to-r from-violet-200 to-pink-200">
+<section id="about-me" class="bg-gradient-to-r from-violet-200 to-pink-200 pt-10">
 
-  <div id="block-works" class="{{'text-center : mt-5'}}">
-
-    <h2 class="{{ 'text-3xl : font-bold : pt-12' }}">Sobre mí</h2>
+  <div id="block-about" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
+    <div>
+      <img src="{{ asset('storage/homepage_icons/'. 'about-me.png') }}" class=" w-12 mr-5">
+    </div>
+    <div>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Sobre mí</h2>
+    </div>
 
   </div>
 
@@ -98,14 +104,15 @@
 
 <!-- Technologies section -->
 
-<section id="technologies">
-  <div id="technologies">
-
-    <div id="block-technologies" class="{{'text-center : mt-6'}}">
-  
-      <h2 class="{{ 'text-3xl : font-bold : mt-8' }}">Tecnologías que uso</h2>
-  
+<section id="technologies" class=" pt-10">
+  <div id="block-technologies" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
+    <div>
+      <img src="{{ asset('storage/homepage_icons/'. 'technologies.png') }}" class=" w-12 mr-5">
     </div>
+    <div>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Tecnologías que uso</h2>
+    </div>
+
   </div>
 
   <div class="w-full grid grid-cols-4 lg:grid-cols-8 gap-4 my-16 justify-items-center p-3">
@@ -141,15 +148,17 @@
 
 <!-- Contact me section -->
 
-<section id="contact-me">
-  <div id="contact">
-
-    <div id="block-contact" class="{{'text-center : mt-6'}}">
-  
-      <h2 class="{{ 'text-3xl : font-bold : mt-8' }}">Contacto</h2>
-  
+<section id="contact-me" class="pt-10">
+  <div id="block-contact" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
+    <div>
+      <img src="{{ asset('storage/homepage_icons/'. 'contact.png') }}" class=" w-12 mr-5">
     </div>
+    <div>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Contacta conmigo</h2>
+    </div>
+
   </div>
+
 
 <section id="contact-form" class="{{'p-24'}}">
     <form>
