@@ -73,7 +73,7 @@
 
 <!-- About me section -->
 
-<section id="about-me" class="bg-gradient-to-r from-indigo-100 to-pink-100">
+<section id="about-me" class="bg-gradient-to-r from-violet-200 to-pink-200">
 
   <div id="block-works" class="{{'text-center : mt-5'}}">
 
@@ -95,6 +95,49 @@
   </div>
 
 </section>
+
+<!-- Technologies section -->
+
+<section id="technologies">
+  <div id="technologies">
+
+    <div id="block-technologies" class="{{'text-center : mt-6'}}">
+  
+      <h2 class="{{ 'text-3xl : font-bold : mt-8' }}">Tecnologías que uso</h2>
+  
+    </div>
+  </div>
+
+  <div class="w-full grid grid-cols-4 lg:grid-cols-8 gap-4 my-16 justify-items-center p-3">
+
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'css3-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'html5-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'tailwind-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'php-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'laravel-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'mysql-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'mongo-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'git-icon.png') }}" class="  w-20">
+  </div>
+
+  </div>
+
+</div>
 
 <!-- Contact me section -->
 
@@ -125,5 +168,3 @@
   </section>
 
 </div>
-
-@endsection
