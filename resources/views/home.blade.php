@@ -92,7 +92,7 @@
     <div class="rounded-full w-60 h-60 bg-gradient-to-r from-indigo-800 to-pink-500 flex justify-center items-center">
       <img class="rounded-full w-56 h-56 object-cover" src="{{ asset('storage/'. $user->img_name) }}" alt="My logo" width="250px" />
     </div>
-    <div class=" max-w-550 text-center mt-10 lg:text-left lg:ml-8">
+    <div class=" max-w-550 text-center mt-10 lg:mt-0 lg:text-left lg:ml-8">
       <h3 class=" text-3xl mb-4">Hola, mi nombre es {{$user->name}}</h3>
       <p>{{$user->description}}</p>
     </div>
@@ -148,7 +148,7 @@
 
 <!-- Contact me section -->
 
-<section id="contact-me" class="pt-10">
+<section id="contact" class="pt-10">
   <div id="block-contact" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
     <div>
       <img src="{{ asset('storage/homepage_icons/'. 'contact.png') }}" class=" w-12 lg:mr-5">
