@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeControler;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -18,7 +19,7 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/', HomeControler::class)->name('index');
 
-Route::get('/download-cv', FileControler::class)->name('download');
+Route::get('/download-cv', [FileController::class, 'downloadCv'])->name('download.cv');
 
 Route::middleware('auth')->group(function () {
 
