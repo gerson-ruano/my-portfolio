@@ -10,7 +10,7 @@
 
 <div class="{{ 'bg-gradient-to-r from-indigo-800 to-pink-500' }}" id="header-img">
 
-  <div id="heading" class="p-10 text-center">
+  <div id="heading" class="px-10 py-14 text-center">
     <h1 class=" font-sans mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">Desarollador Web Full Stack</h1>
     <p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">¡Hola, soy Carlos Martínez! Soy desarrolador web full stack. En esta web encontrarás todos mis proyectos y tecnologías con las que he trabajado.</p>
     <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2">
@@ -79,7 +79,7 @@
 
   <div id="block-about" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
     <div>
-      <img src="{{ asset('storage/homepage_icons/'. 'about-me.png') }}" class=" w-12 mr-5">
+      <img src="{{ asset('storage/homepage_icons/'. 'about-me.png') }}" class=" w-12 lg:mr-5">
     </div>
     <div>
       <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Sobre mí</h2>
@@ -87,12 +87,12 @@
 
   </div>
 
-  <div id="info-card" class="{{'flex : flex-col : items-center : space-be  justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : md:flex-row' }}">
+  <div id="info-card" class="{{'flex : flex-col : items-center : space-be  justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : lg:flex-row' }}">
     
     <div class="rounded-full w-60 h-60 bg-gradient-to-r from-indigo-800 to-pink-500 flex justify-center items-center">
       <img class="rounded-full w-56 h-56 object-cover" src="{{ asset('storage/'. $user->img_name) }}" alt="My logo" width="250px" />
     </div>
-    <div class="{{' max-w-550 : sm:m-10'}}">
+    <div class=" max-w-550 text-center mt-10 lg:text-left lg:ml-8">
       <h3 class=" text-3xl mb-4">Hola, mi nombre es {{$user->name}}</h3>
       <p>{{$user->description}}</p>
     </div>
@@ -107,7 +107,7 @@
 <section id="technologies" class=" pt-10">
   <div id="block-technologies" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
     <div>
-      <img src="{{ asset('storage/homepage_icons/'. 'technologies.png') }}" class=" w-12 mr-5">
+      <img src="{{ asset('storage/homepage_icons/'. 'technologies.png') }}" class=" w-12 lg:mr-5">
     </div>
     <div>
       <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Tecnologías que uso</h2>
@@ -151,7 +151,7 @@
 <section id="contact-me" class="pt-10">
   <div id="block-contact" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
     <div>
-      <img src="{{ asset('storage/homepage_icons/'. 'contact.png') }}" class=" w-12 mr-5">
+      <img src="{{ asset('storage/homepage_icons/'. 'contact.png') }}" class=" w-12 lg:mr-5">
     </div>
     <div>
       <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Contacta conmigo</h2>
