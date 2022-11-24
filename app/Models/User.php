@@ -51,6 +51,12 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Work');
     }
 
+    public function getAdminProfile() 
+    {
+        $admin = User::find(1);
+
+        return $admin;
+    }
 
 
 

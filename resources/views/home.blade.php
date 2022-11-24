@@ -92,11 +92,11 @@
   <div id="info-card" class="{{'flex : flex-col : items-center : space-be  justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : lg:flex-row' }}">
     
     <div class="rounded-full w-60 h-60 bg-gradient-to-r from-indigo-800 to-pink-500 flex justify-center items-center">
-      <img class="rounded-full w-56 h-56 object-cover" src="{{ asset('storage/'. $user->img_name) }}" alt="My logo" width="250px" />
+      <img class="rounded-full w-56 h-56 object-cover" src="{{ asset('storage/'. $adminProfile->img_name) }}" alt="My logo" width="250px" />
     </div>
     <div class=" max-w-550 text-center mt-10 lg:mt-0 lg:text-left lg:ml-8">
-      <h3 class=" text-3xl mb-4">Hola, mi nombre es {{$user->name}}</h3>
-      <p>{{$user->description}}</p>
+      <h3 class=" text-3xl mb-4">Hola, mi nombre es {{$adminProfile->name}}</h3>
+      <p>{{$adminProfile->description}}</p>
     </div>
   
   </div>
