@@ -8,15 +8,19 @@
 
 <!-- Header image -->
 
-<div class="{{ 'bg-indigo-500 : h-80 : bg-[url("../images/header-background.jpg")] ' }}" id="header-img">
+<div class="{{ 'bg-gradient-to-r from-indigo-800 to-pink-500' }}" id="header-img">
 
-  <div id="heading" class="p-10 text-center">
-    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">Desarollador Web Full Stack</h1>
-    <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">¡Hola, soy Carlos Martínez. Soy desarrolador web full stack. En esta web encontrarás todos mis proyectos y tecnologías con las que he trabajado.</p>
-    <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-      Ver trabajos
-      <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-    </a>
+  <div id="heading" class="px-10 py-14 text-center">
+    <h1 class=" font-sans mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">Desarollador Web Full Stack</h1>
+    <p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">¡Hola, soy Carlos Martínez! Soy desarrolador web full stack. En esta web encontrarás todos mis proyectos y tecnologías con las que he trabajado.</p>
+    <form action="{{route('download.cv')}}" >
+      <button type="submit" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2">
+    </form> 
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 inline">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      Descargar cv
+     </button>
   </div>
 </div>
 
@@ -24,9 +28,13 @@
 
 <section id="works" class="{{'p-10'}}">
 
-  <div id="block-works" class="{{'text-center : mt-5'}}">
-
-    <h2 class="{{ 'text-3xl : font-bold' }}">Mis trabajos</h2>
+  <div id="block-works" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
+    <div>
+      <img src="{{ asset('storage/homepage_icons/'. 'works.png') }}" class=" w-12 mr-5">
+    </div>
+    <div>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Mis trabajos</h2>
+    </div>
 
   </div>
 
@@ -36,7 +44,7 @@
   
     <div class="@if($work->is_visible) w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 @else hidden @endif">
     <a href="#">
-        <img class="rounded-t-lg max-w-382" src="{{ asset('storage/'. $work->img_name) }}" alt="football clubs manager website">
+        <img class="rounded-t-lg" src="{{ asset('storage/'. $work->img_name) }}" alt="football clubs manager website">
     </a>
     <div class="p-5">
         <a href="#">
@@ -44,7 +52,7 @@
         </a>
         <p class="mb-4 font-normal text-gray-700 dark:text-gray-400">{{$work->description}}</p>
         @if ($work->demo_link)
-          <a href="#" class="inline-flex items-center mr-2 py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <a href="#" class="inline-flex items-center mr-2 py-2 px-3 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300">
           <svg class="w-5 h-5 pr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Demo
         </a>
         @endif
@@ -69,20 +77,25 @@
 
 <!-- About me section -->
 
-<section id="about-me" class="bg-slate-100 pt-6">
+<section id="about-me" class="bg-gradient-to-r from-violet-200 to-pink-200 pt-10">
 
-  <div id="block-works" class="{{'text-center : mt-5'}}">
-
-    <h2 class="{{ 'text-3xl : font-bold' }}">Sobre mí</h2>
+  <div id="block-about" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
+    <div>
+      <img src="{{ asset('storage/homepage_icons/'. 'about-me.png') }}" class=" w-12 lg:mr-5">
+    </div>
+    <div>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Sobre mí</h2>
+    </div>
 
   </div>
 
-  <div id="info-card" class="{{'flex : flex-col : items-center : space-be  justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : md:flex-row' }}">
+  <div id="info-card" class="{{'flex : flex-col : items-center : space-be  justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : lg:flex-row' }}">
     
-    <div><img class="rounded-full w-60 h-60 object-cover" src="{{ asset('storage/'. $user->img_name) }}" alt="My logo" width="250px" />
+    <div class="rounded-full w-60 h-60 bg-gradient-to-r from-indigo-800 to-pink-500 flex justify-center items-center">
+      <img class="rounded-full w-56 h-56 object-cover" src="{{ asset('storage/'. $user->img_name) }}" alt="My logo" width="250px" />
     </div>
-    <div class="{{' max-w-550 : sm:m-10'}}">
-      <h3 class=" text-2xl mb-2">Hola, mi nombre es {{$user->name}}</h3>
+    <div class=" max-w-550 text-center mt-10 lg:mt-0 lg:text-left lg:ml-8">
+      <h3 class=" text-3xl mb-4">Hola, mi nombre es {{$user->name}}</h3>
       <p>{{$user->description}}</p>
     </div>
   
@@ -91,17 +104,63 @@
 
 </section>
 
+<!-- Technologies section -->
+
+<section id="technologies" class=" pt-10">
+  <div id="block-technologies" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
+    <div>
+      <img src="{{ asset('storage/homepage_icons/'. 'technologies.png') }}" class=" w-12 lg:mr-5">
+    </div>
+    <div>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Tecnologías que uso</h2>
+    </div>
+
+  </div>
+
+  <div class="w-full grid grid-cols-4 lg:grid-cols-8 gap-4 my-16 justify-items-center p-3">
+
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'css3-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'html5-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'tailwind-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'php-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'laravel-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'mysql-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'mongo-icon.png') }}" class="  w-20">
+  </div>
+  <div>
+    <img src="{{ asset('storage/tech_icons/'. 'git-icon.png') }}" class="  w-20">
+  </div>
+
+  </div>
+
+</div>
+
 <!-- Contact me section -->
 
-<section id="contact-me">
-  <div id="contact">
-
-    <div id="block-contact" class="{{'text-center : mt-6'}}">
-  
-      <h2 class="{{ 'text-3xl : font-bold' }}">Contacto</h2>
-  
+<section id="contact" class="pt-10">
+  <div id="block-contact" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
+    <div>
+      <img src="{{ asset('storage/homepage_icons/'. 'contact.png') }}" class=" w-12 lg:mr-5">
     </div>
+    <div>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Contacta conmigo</h2>
+    </div>
+
   </div>
+
 
 <section id="contact-form" class="{{'p-24'}}">
     <form>
@@ -114,11 +173,9 @@
         <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escribe aquí"></textarea>
       </div>
       <div class="mb-6">
-      <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Enviar</button>
+        <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium text-sm rounded-lg px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Enviar</button>
       </div>
     </form>
   </section>
 
 </div>
-
-@endsection
