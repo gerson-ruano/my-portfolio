@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title','home')
+@section('title','Carlos Full Stack Developer')
 
 @section('content')
 
@@ -35,17 +35,16 @@
     <div>
       <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Mis trabajos</h2>
     </div>
-
   </div>
 
   <div id="work-cards" class="{{' mt-12 content-center grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 '}}">
 
-@foreach ($works as $work)
+  @foreach ($works as $work)
   
     <div class="@if($work->is_visible) w-full m-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 @else hidden @endif">
-    <a href="#">
-        <img class="rounded-t-lg" src="{{ asset('storage/'. $work->img_name) }}" alt="football clubs manager website">
-    </a>
+      <a href="#">
+          <img class="rounded-t-lg" src="{{ asset('storage/'. $work->img_name) }}" alt="football clubs manager website">
+      </a>
     <div class="p-5">
         <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$work->name}}</h5>
@@ -66,19 +65,16 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
          </a>
-       @endauth 
+        @endauth 
         @endif
-    </div>
-  </div>
-
+     </div>
+   </div>
   @endforeach
-
 </section>
 
 <!-- About me section -->
 
 <section id="about-me" class="bg-gradient-to-r from-violet-200 to-pink-200 pt-10">
-
   <div id="block-about" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
     <div>
       <img src="{{ asset('storage/homepage_icons/'. 'about-me.png') }}" class=" w-12 lg:mr-5">
@@ -86,11 +82,9 @@
     <div>
       <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Sobre mí</h2>
     </div>
-
   </div>
 
   <div id="info-card" class="{{'flex : flex-col : items-center : space-be  justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : lg:flex-row' }}">
-    
     <div class="rounded-full w-60 h-60 bg-gradient-to-r from-indigo-800 to-pink-500 flex justify-center items-center">
       <img class="rounded-full w-56 h-56 object-cover" src="{{ asset('storage/'. $adminProfile->img_name) }}" alt="My logo" width="250px" />
     </div>
@@ -99,7 +93,6 @@
       <p>{{$adminProfile->description}}</p>
     </div>
   
-  </div>
   </div>
 
 </section>
@@ -114,12 +107,11 @@
     <div>
       <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Tecnologías que uso</h2>
     </div>
-
   </div>
 
-  <section class="bg-white dark:bg-gray-900">
-    <div class=" py-24 mx-auto max-w-screen-xl px-14">
-        <div class="grid grid-cols-2 gap-16 text-gray-500 md:grid-cols-3 lg:grid-cols-8 dark:text-gray-400">
+     <div class="bg-white dark:bg-gray-900">
+       <div class=" py-24 mx-auto max-w-screen-xl px-14">
+          <div class="grid grid-cols-2 gap-16 text-gray-500 md:grid-cols-3 lg:grid-cols-8 dark:text-gray-400">
             <a href="https://html.spec.whatwg.org/multipage/" class="flex justify-center items-center">
               <svg class="h-16 hover:text-purple-600  dark:hover:text-white" viewBox="0 0 30 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.072,0l2.399,26.963L15.234,30l10.837-3.037L28.472,0H2.072z M23.259,8.795H10.622l0.281,3.393h12.074L22.04,22.389    l-6.73,1.855v0.02h-0.075l-6.787-1.875l-0.413-5.213h3.281l0.244,2.625l3.675,0.994l3.692-0.994l0.414-4.275H7.866L6.984,5.514    H23.56L23.259,8.795z"/>
@@ -165,13 +157,13 @@
                 <path d="M504.4,115.83a5.72,5.72,0,0,0-.28-.68,8.52,8.52,0,0,0-.53-1.25,6,6,0,0,0-.54-.71,9.36,9.36,0,0,0-.72-.94c-.23-.22-.52-.4-.77-.6a8.84,8.84,0,0,0-.9-.68L404.4,55.55a8,8,0,0,0-8,0L300.12,111h0a8.07,8.07,0,0,0-.88.69,7.68,7.68,0,0,0-.78.6,8.23,8.23,0,0,0-.72.93c-.17.24-.39.45-.54.71a9.7,9.7,0,0,0-.52,1.25c-.08.23-.21.44-.28.68a8.08,8.08,0,0,0-.28,2.08V223.18l-80.22,46.19V63.44a7.8,7.8,0,0,0-.28-2.09c-.06-.24-.2-.45-.28-.68a8.35,8.35,0,0,0-.52-1.24c-.14-.26-.37-.47-.54-.72a9.36,9.36,0,0,0-.72-.94,9.46,9.46,0,0,0-.78-.6,9.8,9.8,0,0,0-.88-.68h0L115.61,1.07a8,8,0,0,0-8,0L11.34,56.49h0a6.52,6.52,0,0,0-.88.69,7.81,7.81,0,0,0-.79.6,8.15,8.15,0,0,0-.71.93c-.18.25-.4.46-.55.72a7.88,7.88,0,0,0-.51,1.24,6.46,6.46,0,0,0-.29.67,8.18,8.18,0,0,0-.28,2.1v329.7a8,8,0,0,0,4,6.95l192.5,110.84a8.83,8.83,0,0,0,1.33.54c.21.08.41.2.63.26a7.92,7.92,0,0,0,4.1,0c.2-.05.37-.16.55-.22a8.6,8.6,0,0,0,1.4-.58L404.4,400.09a8,8,0,0,0,4-6.95V287.88l92.24-53.11a8,8,0,0,0,4-7V117.92A8.63,8.63,0,0,0,504.4,115.83ZM111.6,17.28h0l80.19,46.15-80.2,46.18L31.41,63.44Zm88.25,60V278.6l-46.53,26.79-33.69,19.4V123.5l46.53-26.79Zm0,412.78L23.37,388.5V77.32L57.06,96.7l46.52,26.8V338.68a6.94,6.94,0,0,0,.12.9,8,8,0,0,0,.16,1.18h0a5.92,5.92,0,0,0,.38.9,6.38,6.38,0,0,0,.42,1v0a8.54,8.54,0,0,0,.6.78,7.62,7.62,0,0,0,.66.84l0,0c.23.22.52.38.77.58a8.93,8.93,0,0,0,.86.66l0,0,0,0,92.19,52.18Zm8-106.17-80.06-45.32,84.09-48.41,92.26-53.11,80.13,46.13-58.8,33.56Zm184.52,4.57L215.88,490.11V397.8L346.6,323.2l45.77-26.15Zm0-119.13L358.68,250l-46.53-26.79V131.79l33.69,19.4L392.37,178Zm8-105.28-80.2-46.17,80.2-46.16,80.18,46.15Zm8,105.28V178L455,151.19l33.68-19.4v91.39h0Z"/>
               </svg>                                                                                    
             </a>
-        </div>
+          </div>
+       </div>
+     </div>
     </div>
 </section>
 
-</div>
-
-<!-- Contact me section -->
+<!-- Contact section -->
 
 <section id="contact" class="pt-10">
   <div id="block-contact" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
@@ -181,24 +173,24 @@
     <div>
       <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Contacta conmigo</h2>
     </div>
-
   </div>
 
 
-<section id="contact-form" class="{{'p-24'}}">
-    <form>
-      <div class="mb-6">
-        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tu nombre</label>
-        <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tu nombre" required="">
+  <div id="contact-form" class="p-24">
+    <form action="#" class="space-y-8">
+      <div>
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tu email</label>
+          <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" required>
       </div>
-      <div class="mb-6">  
-        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tu mensaje</label>
-        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escribe aquí"></textarea>
+      <div>
+          <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Asunto</label>
+          <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" required>
       </div>
-      <div class="mb-6">
-        <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium text-sm rounded-lg px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Enviar</button>
+      <div class="sm:col-span-2">
+          <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Mensaje</label>
+          <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"></textarea>
       </div>
+      <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Enviar</button>
     </form>
-  </section>
-
-</div>
+  </div>
+</section>
