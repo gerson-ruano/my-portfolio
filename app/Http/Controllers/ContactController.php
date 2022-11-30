@@ -32,12 +32,11 @@ class ContactController extends Controller
             ->subject($request->get('subject'));
         });
 
-        return redirect()->route('admin.index')->with(
+        return redirect()->route('index')->with(
             [
-                'type' => '¡Email enviado!',
-                'msg' =>'Tu email se ha enviado correctamente'
+                'type' => 'green',
+                'msg' =>'El formulario se ha enviado correctamente, en breve recibirás una respuesta'
             ]);
-
 
         
     }
