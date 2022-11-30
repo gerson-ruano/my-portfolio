@@ -1,11 +1,11 @@
 
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 shadow-lg">
   <div class="container flex flex-wrap items-center justify-between max-w-full">
-  <a href="{{route('index')}}" class="flex items-center">
+  <a href="{{route('index')}}" class="flex items-center flex-grow">
       <img src="{{ asset('storage/homepage_icons/full-stack.png') }}" class="h-6 mr-3 sm:h-9" alt="Carlos full stack developer" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Carlos<span class=" font-bold text-[#3c87d0]">FullStack</span></span>
   </a>
-<div class="flex items-center md:order-2">
+<div class="flex items-center md:order-2 @auth md:ml-8 @endauth">
   @auth
   <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
     <span class="sr-only">Open user menu</span>
@@ -42,7 +42,7 @@
 </button>
 </div>
 @if (Route::is('index'))
-  <div class="items-center justify-items-end hidden w-full md:flex md:w-auto md:order-1 lg:mr-24" id="mobile-menu-2">
+  <div class="items-center justify-items-end hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
     <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
       <li>
         <a href="#" class="block py-2 pl-3 pr-4 text-white bg-purple-800 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
