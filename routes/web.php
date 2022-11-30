@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\ProfileController;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::get('/', HomeControler::class)->name('index');
-Route::post('/', [ContactController::class, 'storeContact'])->name('store.contact');
+Route::post('/', [ContactController::class, 'storeContact'])->name('store.contact')->middleware(ProtectAgainstSpam::class);
 Route::get('/download-cv', [FileController::class, 'downloadCv'])->name('download.cv');
 
 Route::middleware('auth')->group(function () {
