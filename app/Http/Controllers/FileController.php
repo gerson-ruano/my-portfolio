@@ -10,9 +10,9 @@ class FileController extends Controller
     public function downloadCv()
 
     {
-    	$filePath = public_path("storage/carlos-full-stack.pdf");
+    	$filePath = storage_path('app/public/carlos-full-stack.pdf');
     	$headers = ['Content-Type: application/pdf'];
-        $fileName = "carlos-full-stack";
+        $fileName = "carlos-full-stack.pdf";
 
     	return response()->download($filePath, $fileName, $headers);
     }
