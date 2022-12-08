@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('img_name');
             $table->string('name',30)->unique();
             $table->text('description',135);
-            $table->string('demo_link');
-            $table->string('repo_link');
+            $table->string('demo_link')->nullable();
+            $table->string('repo_link')->nullable();
             $table->boolean('is_visible')->default(true);
             $table->timestamps();
 
