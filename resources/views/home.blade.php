@@ -30,7 +30,7 @@
 
   <div id="block-works" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
     <div>
-      <img src="{{ asset('storage/homepage_icons/'. 'works.png') }}" class=" w-12 mr-0 lg:mr-5">
+      <img src="{{ asset('images/homepage_icons/'. 'works.png') }}" class=" w-12 mr-0 lg:mr-5">
     </div>
     <div>
       <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Mis trabajos</h2>
@@ -77,19 +77,24 @@
 <section id="about-me" class="bg-gradient-to-r from-violet-200 to-pink-200 pt-10">
   <div id="block-about" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
     <div>
-      <img src="{{ asset('storage/homepage_icons/'. 'about-me.png') }}" class=" w-12 lg:mr-5">
+      <img src="{{ asset('images/homepage_icons/'. 'about-me.png') }}" class=" w-12 lg:mr-5">
     </div>
     <div>
-      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Sobre mí</h2>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">
+        Sobre mí
+      </h2>
     </div>
   </div>
 
   <div id="info-card" class="{{'flex : flex-col : items-center : space-be  justify-center : w-full : pt-12 : pl-12 : pr-12 : pb-16 : lg:flex-row' }}">
     <div class="rounded-full w-60 h-60 bg-gradient-to-r from-indigo-800 to-pink-500 flex justify-center items-center">
-      <img class="rounded-full w-56 h-56 object-cover" src="{{ asset('storage/'. $adminProfile->img_name) }}" alt="My logo" width="250px" />
+      <img class="rounded-full w-56 h-56 object-cover"
+       @if ($adminProfile->img_name) src="{{ asset('storage/'. $adminProfile->img_name) }}" @else src="{{ asset('images/default-profile-image.png') }}" @endif width="250px" />
     </div>
     <div class=" max-w-550 text-center mt-10 lg:mt-0 lg:text-left lg:ml-8">
-      <h3 class=" text-3xl mb-4">Hola, mi nombre es {{$adminProfile->name}}</h3>
+      <h3 class=" text-3xl mb-4">
+        Hola, mi nombre es {{$adminProfile->name}}
+      </h3>
       <p>{{$adminProfile->description}}</p>
     </div>
   
@@ -102,10 +107,12 @@
 <section id="technologies" class=" pt-10">
   <div id="block-technologies" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
     <div>
-      <img src="{{ asset('storage/homepage_icons/'. 'technologies.png') }}" class=" w-12 lg:mr-5">
+      <img src="{{ asset('images/homepage_icons/'. 'technologies.png') }}" class=" w-12 lg:mr-5">
     </div>
     <div>
-      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Tecnologías que uso</h2>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">
+        Tecnologías que uso
+      </h2>
     </div>
   </div>
 
@@ -168,10 +175,12 @@
 <section id="contact" class="pt-10">
   <div id="block-contact" class=" w-full flex flex-col lg:flex-row justify-center content-center items-center">
     <div>
-      <img src="{{ asset('storage/homepage_icons/'. 'contact.png') }}" class=" w-12 lg:mr-5">
+      <img src="{{ asset('images/homepage_icons/'. 'contact.png') }}" class=" w-12 lg:mr-5">
     </div>
     <div>
-      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">Contacta conmigo</h2>
+      <h2 class="{{ 'text-3xl : font-bold: text-gray-800 : font-medium : pt-2 : lg:pt-2  ' }}">
+        Contacta conmigo
+      </h2>
     </div>
   </div>
 
@@ -190,14 +199,18 @@
           <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tu email</label>
           <input type="email" id="email" name="email" value="{{ old('email') }}" @error('email') is-invalid @enderror class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light">
           @error('email')
-          <div class="alert alert-danger text-red-600">{{ $message }}</div>
+          <div class="alert alert-danger text-red-600">
+            {{ $message }}
+          </div>
           @enderror
       </div>
       <div>
           <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Asunto</label>
           <input type="text" id="subject" name="subject" value="{{ old('subject') }}" @error('subject') is-invalid @enderror class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light">
           @error('subject')
-          <div class="alert alert-danger text-red-600">{{ $message }}</div>
+          <div class="alert alert-danger text-red-600">
+            {{ $message }}
+          </div>
           @enderror
       </div>
       <div class="sm:col-span-2">
