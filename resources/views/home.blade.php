@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  <div id="work-cards" class="{{' mt-12 place-items-center content-center grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 '}}">
+  <div id="work-cards" class=" mt-12 place-items-center content-center grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3">
 
   @foreach ($works as $work)
   
