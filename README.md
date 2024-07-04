@@ -1,6 +1,6 @@
 
 # Porfolio GERSON RUANO
-Basado en el repositorio https://github.com/carlos-full-stack/my-personal-portfolio.git 
+Basado en el repositorio https://github.com/carlos-full-stack/my-personal-portfolio.git /
 [Carlos Martinez](https://carlosfullstack.es/)
 
 Aplicación para subir y editar tus proyectos de desarrollo para hacer de una manera llamativa tu presentación.
