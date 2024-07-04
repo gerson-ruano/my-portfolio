@@ -1,20 +1,23 @@
-# Mi porfolio personal 
 
-Aplicación para subir y editar tus proyectos de desarrollo
+# Porfolio GERSON RUANO
+Basado en el repositorio https://github.com/carlos-full-stack/my-personal-portfolio.git 
+[Carlos Martinez](https://carlosfullstack.es/)
 
-<img src="https://user-images.githubusercontent.com/104822099/208479821-d38db6ea-2844-4b13-8af0-58ace8636889.png" width="500" heigh="288px" alt="Mi portfolio personal">
+Aplicación para subir y editar tus proyectos de desarrollo para hacer de una manera llamativa tu presentación.
+
+<!--img src="https://user-images.githubusercontent.com/104822099/208479821-d38db6ea-2844-4b13-8af0-58ace8636889.png" width="500" heigh="288px" alt="Mi portfolio personal"-->
 
 
 ## Descripción
 
-Aplicación que permite subir tus proyectos añadiendo un título, imagen y descripción, así como el enlace a la demo y respositorio (opcional) Además muestra un CTA para descargar el curriciculum, una sección con las tecnologías aprendidas y un formulario de contacto con protección antiSPAM.
+Aplicación que permite subir tus proyectos añadiendo un título, imagen y descripción, respositorio (opcional) Además muestra un enlace para descargar el CV, una sección con las tecnologías utilizadas, tecnologias conocidas, enlaces a las plataformas personales.
 
 ### Instalación
 
 ```
 # Clona y accede al repositorio
-$ git clone https://github.com/carlos-full-stack/my-personal-portfolio.git
-$ cd my-personal-portfolio
+$ git clone https://github.com/gerson-ruano/my-portfolio.git
+$ cd my-portfolio
 
 # Instala las dependencias
 $ composer install
@@ -37,11 +40,6 @@ $ npm run dev
 **Flowbite** para crear componentes personalizados: header, footer, menús y alertas de confirmación
 **Breeze** para la atentificación de los usuarios
 **HoneySpot** para evitar el SPAM del formulario de contacto.
-
-
-## Autor
-
-[Carlos Martinez](https://carlosfullstack.es/)
 
 ## Documentación
 
