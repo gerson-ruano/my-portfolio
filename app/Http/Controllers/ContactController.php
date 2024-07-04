@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function storeContact(Request $request) 
+    public function storeContact(Request $request)
     {
 
         $request->validate(
@@ -19,7 +19,7 @@ class ContactController extends Controller
         ]);
 
         $input = $request->all();
-    
+
         Contact::create($input);
 
         Mail::send('contact', array(
@@ -27,7 +27,7 @@ class ContactController extends Controller
             'subject' => $input['subject'],
             'message' => $input['message'],
         ), function($message) use ($request){
-            $message->from('carlos@carlosfullstack.es', 'Carlos Martinez');
+            $message->from('toge619@gmail.com', 'Gerson Ruano');
             $message->to($request->email)
             ->subject($request->get('subject'));
         });
@@ -38,6 +38,6 @@ class ContactController extends Controller
                 'msg' =>'El formulario se ha enviado correctamente, en breve recibirás una respuesta'
             ]);
 
-        
+
     }
 }

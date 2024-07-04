@@ -1,6 +1,6 @@
 <h2>¡Hola!</h2> <br><br>
 
-Acabas de recibir un email de CarlosFullStack
+Acabas de recibir un email de Gerson Developer
 
 Contenido: <br><br>
 

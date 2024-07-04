@@ -1,12 +1,12 @@
 
-<nav class="bg-white border-gray-200 px-4 py-2.5 rounded dark:bg-gray-900 shadow-lg">
+<nav class="fixed nav-bar">
   <div class="container flex flex-wrap items-center justify-between max-w-full">
   <a href="{{route('index')}}" class="flex items-center flex-grow">
-      <img src="{{ asset('storage/homepage_icons/full-stack.png') }}" class="h-6 mr-3 sm:h-9" alt="Carlos full stack developer" />
+      <img src="{{ asset('images/about-me.png') }}" class="h-6 mr-3 sm:h-9 rounded-lg " alt="Gerson Ruano developer" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-        Carlos
+        Gerson Ruano
         <span class=" font-bold text-[#3c87d0]">
-          FullStack
+          Developer
         </span>
       </span>
   </a>
@@ -58,18 +58,23 @@
 </div>
 @if (Route::is('index'))
   <div class="items-center justify-items-end hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
-    <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+    <ul class="flex flex-row p-4 mt-4 border border-gray-100 rounded-lg bg-green-500 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      {{--<div class="items-center justify-items-end hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
+        <ul id="user-dropdown" class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-green-400 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">--}}
+
+
       <li>
-        <a href="#" class="block py-2 pl-3 pr-4 text-white bg-purple-800 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+            Home</a>
+      </li>
+      <li>
+        <a href="#works" class="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+          Proyectos
+        </a>
       </li>
       <li>
         <a href="#about-me" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
           Sobre mí
-        </a>
-      </li>
-      <li>
-        <a href="#works" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-          Trabajos
         </a>
       </li>
       <li>
@@ -78,11 +83,23 @@
         </a>
       </li>
       <li>
-        <a href="#contact" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-          Contacto
+        <a href="#plataform" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+          Perfiles
         </a>
       </li>
     </ul>
   </div>
+
+  <script>
+    $(document).ready(function() {
+      // Cuando el usuario haga clic en un elemento del menú
+      $('#user-dropdown a').on('click', function() {
+        // Ocultar la parte verde del menú
+        $('#mobile-menu-2').hide();
+      });
+    });
+
+    </script>
 @endif
+
 </nav>
