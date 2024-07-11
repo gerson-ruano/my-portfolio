@@ -20,11 +20,12 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'name' => 'Admin',
-                'description' => 'Solo para Administradores.',
+                'profesion' => 'Dev',
+                'description' => 'Default para Administradores.',
                 'img_name' => null,
                 'email' => 'admin@admin.com',
                 'email_verified_at' => now(),
-                'password' => Hash::make('12341234'), // Cambia 'password' por la contraseña que prefieras
+                'password' => Hash::make('12341234'),
                 'remember_token' => Str::random(10),
                 'created_at' => now(),
                 'updated_at' => now(),

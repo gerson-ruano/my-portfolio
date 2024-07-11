@@ -10,7 +10,7 @@
 
 @include('components.alert')
 
-@endif  
+@endif
 
 <!-- user section -->
 
@@ -40,35 +40,42 @@
             <div id="user-img" class="lg:max-w-md lg:p-8">
                 <img class="rounded-t-lg max-w-382" @if ($user->img_name) src="{{ asset('storage/'. $user->img_name) }}" @else src="{{ asset('images/default-profile-image.png') }}" @endif>
                 <div class="p-5 lg:p-0 lg:pt-5">
-                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 @error('image') is-invalid @enderror" id="file_input" type="file" name="image"> 
+                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 @error('image') is-invalid @enderror" id="file_input" type="file" name="image">
                 @error('image')
                 <div class="alert alert-danger text-red-600">{{ $message }}</div>
-            @enderror   
+            @enderror
               </div>
               </div>
             <div id="user-form" class="p-6 w-full">
               <div class="mb-6">
-                <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre de usuario</label>    
+                <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre de usuario</label>
                 <input type="text" id="name" name="name" value="{{$user->name}}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error('name') is-invalid @enderror" placeholder="Nombre de usuario" required>
                 @error('name')
                 <div class="alert alert-danger text-red-600">{{ $message }}</div>
-            @enderror 
+            @enderror
+              </div>
+              <div class="mb-6">
+                <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Profesión</label>
+                <input type="text" id="profesion" name="profesion" value="{{$user->profesion}}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error('profesion') is-invalid @enderror" placeholder="Profesion o Pasatiempo" required>
+                @error('profesion')
+                <div class="alert alert-danger text-red-600">{{ $message }}</div>
+            @enderror
               </div>
               <div class="mb-6">
                 <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción</label>
                 <textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error('description') is-invalid @enderror" placeholder="Escribe aquí tu descripción">{{$user->description}}</textarea>
                 @error('description')
                 <div class="alert alert-danger text-red-600">{{ $message }}</div>
-            @enderror 
+            @enderror
               </div>
               <button type="submit" href="{{route('admin.index')}}" class="inline-flex items-center mr-2 py-2 px-3 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300">
                 <svg class="w-5 h-5 pr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg> Actualizar perfil
               </button>
-              
+
             </div>
-          </div> 
+          </div>
         </div>
       </div>
-    </div> 
-  </form>  
+    </div>
+  </form>
 </section>
