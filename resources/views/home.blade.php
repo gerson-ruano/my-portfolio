@@ -14,7 +14,7 @@
             <h1
                 class=" font-sans mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">
                 Analista / Desarrollador</h1>
-            <p class="mb-6 text-lg font-normal text-white lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">¡Hola, soy {{ $adminProfile->name }} {{ $adminProfile->profesion }} En esta web encontrarás muchos de mis proyectos en los que he trabajado y tecnologías con las que he
+            <p class="mb-6 text-lg font-normal text-white lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">¡Hola, soy {{ $adminProfile->name }} {{ $adminProfile->profesion }} en esta web encontrarás muchos de mis proyectos en los que he trabajado y tecnologías con las que he
                 trabajado asi como enlaces a mis demas plataformas.</p>
             <form action="{{ route('download.cv') }}">
                 <button type="submit"

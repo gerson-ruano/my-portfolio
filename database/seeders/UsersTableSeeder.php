@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'name' => 'Admin',
-                'profesion' => 'Dev',
+                'profesion' => 'Desarrollador',
                 'description' => 'Default para Administradores.',
                 'img_name' => null,
                 'email' => 'admin@admin.com',
